@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+:root {
+  --primary-color: #474747;
+  --secondary-color: #ff6347;
+  --gray-color:#DBDFD0;
+  --main-font: "DM Sans", sans-serif;
+  --secondary-font: "Playfair Display", sans-serif;
+  
+}
+
+body {
+  font-family: var(--main-font);
+}
+
