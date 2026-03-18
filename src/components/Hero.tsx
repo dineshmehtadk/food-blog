@@ -5,23 +5,27 @@ export default defineComponent({
   setup() {
     return () => (
       <section class="relative">
+        
+        {/* Background Image */}
         <img
           src="hero-bg.png"
           alt="Hero Image"
-          class="w-full h-auto"
+          class="w-full h-[400px] md:h-[600px] object-cover"
         />
 
-        <div class=" absolute inset-0 flex flex-col items-center justify-center text-center px-110">
-          <h1 class="text-8xl font-[--secondary-font] mb-4 text-black">
+        {/* Overlay Content */}
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-20">
+          
+          <h1 class="text-3xl sm:text-5xl md:text-7xl font-[--secondary-font] mb-4 text-black">
             Best food for your taste
           </h1>
 
-          <p class="text-black max-w-xl px-18">
+          <p class="text-black max-w-xl text-sm md:text-base mb-6">
             Discover delectable cuisine and unforgettable moments in our
             welcoming, culinary haven.
           </p>
 
-          <div class="flex gap-4 justify-center mt-6">
+          <div class="flex flex-col sm:flex-row gap-4">
             <button class="px-6 py-3 text-white bg-[#AD343E] rounded-full hover:opacity-90 transition">
               Book a Table
             </button>
@@ -30,6 +34,7 @@ export default defineComponent({
               Explore Menu
             </button>
           </div>
+
         </div>
       </section>
     );

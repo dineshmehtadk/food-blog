@@ -3,6 +3,10 @@ import Header from "./Header/Header";
 import Hero from "./Hero";
 import Menu from "./Menu";
 import About from "./About";
+import Service from "./Service";
+import Testomonial from "./Testomonial";
+import Blog from "./Blog";
+import Footer from "./Footer";
 
 export default defineComponent({
   name: "Home",
@@ -13,10 +17,11 @@ export default defineComponent({
         <Hero />
         <Menu />
         <About />
-      <div>
-        <h1 class="font-color-red">Welcome to the Home Page!</h1>
-        <p>This is the main landing page of our application.</p>
-      </div>
+        <Service />
+        <Testomonial />
+        <Blog />
+        <Footer />
+      
       </>
     );
   },

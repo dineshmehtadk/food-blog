@@ -1,9 +1,9 @@
 import { defineComponent } from "vue";
 import MenuCard from "./MenuCard";
+
 export default defineComponent({
   name: "Menu",
   setup() {
-
     const menuItems = [
       {
         title: "Breakfast",
@@ -20,31 +20,35 @@ export default defineComponent({
         description: "End your day with a refreshing drink.",
         icon: "menu3.png",
       },
-       {
+      {
         title: "Desserts",
         description: "End your day with a satisfying dinner.",
-        icon: "menu3.png",
+        icon: "menu4.png",
       },
     ];
 
     return () => (
-      <section class="mb-20">
-        <div class="inset-0 flex flex-col items-center justify-center text-center px-40 mt-20">
-          <h1 class="text-6xl font-[--secondary-font] mb-4 text-black">
+      <section class="py-16">
+        
+        {/* Heading */}
+        <div class="max-w-[1024px] mx-auto px-4 text-center">
+          <h1 class="text-3xl md:text-6xl font-[--secondary-font] mb-4 text-black">
             Browse Our Menu
           </h1>
         </div>
-        <div class="flex gap-8 justify-center mt-8">
 
-        {menuItems.map((item) => (
-          <MenuCard
-            title={item.title}
-            description={item.description}
-            icon={item.icon}
-          />
-        ))}
-
+        {/* Cards */}
+        <div class="max-w-[1024px] mx-auto px-4 mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {menuItems.map((item) => (
+            <MenuCard
+              key={item.title}
+              title={item.title}
+              description={item.description}
+              icon={item.icon}
+            />
+          ))}
         </div>
+
       </section>
     );
   },
