@@ -1,4 +1,5 @@
 import { defineComponent } from "vue";
+import { useRouter } from "vue-router";
 
 export default defineComponent({
   name: "BlogItemCard",
@@ -10,8 +11,19 @@ export default defineComponent({
   },
 
   setup(props) {
+   
+
+     const router = useRouter();
+
+
+     function handleRedirect (){
+      router.push({path:"/blog-details",query:props});
+
+     }
+
     return () => (
-      <div class=" max-w-[306px] mx-auto flex flex-col text-center border border-[var(--gray-color)] rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:scale-105 transition duration-300">
+
+      <div onClick={handleRedirect} class=" max-w-[306px] mx-auto flex flex-col text-center border border-[var(--gray-color)] rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:scale-105 transition duration-300">
         {/* Image */}
         <img
           src={props.image}

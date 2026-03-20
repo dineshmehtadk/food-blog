@@ -2,10 +2,13 @@ import { defineComponent } from "vue";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer";
 import BlogItemCard from "@/components/BlogItemCard";
+import { useRoute } from "vue-router";
 
 export default defineComponent({
   name: "BlogDetailsPage",
   setup() {
+    const route = useRoute();
+
     const blogs = [
       {
         date: "January 3, 2023",
@@ -43,7 +46,7 @@ export default defineComponent({
               </h1>
 
               <img
-                src="blog-item-3.png"
+                src={route.query.image as string}
                 class="w-full max-w-[1070px] mx-auto rounded-lg"
                 alt="blog main image"
               />

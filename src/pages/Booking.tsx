@@ -10,34 +10,34 @@ export default defineComponent({
         <Header />
 
         <section>
-          <div class="max-w-full mx-auto py-16  relative mb-[95px]">
+          <div class="max-w-[1296px] mx-auto py-12 sm:py-16 px-4 sm:px-6 relative mb-[95px]">
 
             {/* Heading */}
-            <div class="text-center mb-20">
-              <h1 class="text-3xl md:text-6xl font-[--secondary-font] text-black mb-6">
+            <div class="text-center mb-12 sm:mb-20">
+              <h1 class="text-3xl sm:text-4xl md:text-6xl font-[--secondary-font] text-black mb-4">
                 Book A Table
               </h1>
-              <p class="max-w-[600px] mx-auto">
+              <p class="max-w-[600px] mx-auto text-sm sm:text-base text-gray-600">
                 We consider all the drivers of change gives you the components
                 you need to create something truly impactful.
               </p>
             </div>
 
-            {/* Main Container (for layering) */}
+            {/* Container */}
             <div class="relative flex justify-center">
 
-              {/* Map (Background) */}
+              {/* Map */}
               <img
                 src="map.png"
                 alt="map"
-                class="absolute top-[120px] left-0 w-full z-0 opacity-80"
+                class="absolute top-[80px] sm:top-[120px] left-0 w-full h-[250px] sm:h-[400px] object-cover z-0 opacity-70 rounded-xl"
               />
 
-              {/* Form (Foreground) */}
-              <div class="relative z-50 bg-white border border-gray-300 rounded-xl w-[812px] p-12 shadow-lg mb-65">
+              {/* Form */}
+              <div class="relative z-50 bg-white border border-gray-300 rounded-xl w-full max-w-[812px] p-4 sm:p-8 md:p-10 shadow-lg">
 
                 {/* Row 1 */}
-                <div class="flex gap-6 mb-6">
+                <div class="flex flex-col sm:flex-row gap-4 mb-6">
                   <div class="flex flex-col w-full">
                     <label class="text-sm mb-1 font-medium">Date</label>
                     <input
@@ -56,7 +56,7 @@ export default defineComponent({
                 </div>
 
                 {/* Row 2 */}
-                <div class="flex gap-6 mb-6">
+                <div class="flex flex-col sm:flex-row gap-4 mb-6">
                   <div class="flex flex-col w-full">
                     <label class="text-sm mb-1 font-medium">Name</label>
                     <input
@@ -77,7 +77,7 @@ export default defineComponent({
                 </div>
 
                 {/* Row 3 */}
-                <div class="mb-8">
+                <div class="mb-6">
                   <label class="text-sm mb-1 font-medium block">
                     Total Person
                   </label>
@@ -91,12 +91,13 @@ export default defineComponent({
 
                 {/* Button */}
                 <div class="flex justify-center">
-                  <button class="px-8 py-3 bg-[var(--brown-color)] text-white rounded-full hover:bg-black transition duration-300">
+                  <button class="w-full sm:w-auto px-6 sm:px-8 py-3 bg-[var(--brown-color)] text-white rounded-full hover:bg-black transition duration-300">
                     Book Now
                   </button>
                 </div>
               </div>
             </div>
+
           </div>
         </section>
 

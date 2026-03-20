@@ -10,7 +10,7 @@ export default defineComponent({
         <Header />
 
         <section>
-          <div class="max-w-[1296px] mx-auto py-16 px-4 sm:px-6 relative mb-[95px]">
+          <div class=" mx-auto py-16  sm:px-6 relative mb-[95px] bg-gray-200">
 
             {/* Heading */}
             <div class="text-center mb-16">
@@ -27,7 +27,7 @@ export default defineComponent({
             <div class="relative flex justify-center">
 
               {/* Map Background */}
-              <div class="absolute top-[120px] left-0 w-full h-[600px] bg-gray-200 rounded-xl z-[-111]"></div>
+              <div class="absolute top-[120px] left-0 w-full h-[600px] bg-white rounded-xl z-[-111]"></div>
 
               {/* Form */}
               <div class="relative z-50 bg-white border border-gray-300 rounded-xl w-full max-w-[812px] p-6 sm:p-10 shadow-lg">
@@ -81,7 +81,7 @@ export default defineComponent({
             </div>
 
             {/* Contact Info */}
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 text-center sm:text-left">
+            <div class=" max-w-[1296px] max-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 text-center sm:text-left lg:ml-60">
 
               <div>
                 <h3 class="font-semibold mb-2">Call Us</h3>
