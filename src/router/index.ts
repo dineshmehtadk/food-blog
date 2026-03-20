@@ -1,9 +1,12 @@
 // src/router/index.ts
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/pages/Home";
-import Aboutus from "@/pages/Aboutus";
+import AboutPage from "@/pages/AboutPage";
 import MenuPage from "@/pages/MenuPage";
 import Booking from "@/pages/Booking";
+import BlogPage from "@/pages/BlogPage";
+import BlogDetailsPage from "@/pages/BlogDetailsPage";
+import Contactpage from "@/pages/Contactpage";
 
 const routes = [
   {
@@ -13,8 +16,8 @@ const routes = [
   },
   {
     path: "/about",
-    name: "Aboutus",
-    component: Aboutus,
+    name: "AboutPage",
+    component: AboutPage,
   },
   {
     path: "/menu",
@@ -25,6 +28,21 @@ const routes = [
     path: "/booking",
     name: "Booking",
     component: Booking,
+  },
+   {
+    path: "/blog",
+    name: "BlogPage",
+    component: BlogPage,
+  },
+   {
+    path: "/blog-details",
+    name: "BlogDetailsPage",
+    component: BlogDetailsPage,
+  },
+     {
+    path: "/contact",
+    name: "ContactPage",
+    component: Contactpage,
   },
 ];
 

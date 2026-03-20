@@ -73,7 +73,7 @@ export default defineComponent({
           "delevery-patner-2.png",
           "delevery-patner-3.png",
         ],
-        width: "w-[240px]",
+        width: "w-[235px]",
       },
       {
         logos: [
@@ -81,7 +81,7 @@ export default defineComponent({
           "delevery-patner-5.png",
           "delevery-patner-6.png",
         ],
-        width: "w-[280px]", // wider row
+        width: "w-[251px]", // wider row
       },
       {
         logos: [
@@ -89,7 +89,7 @@ export default defineComponent({
           "delevery-patner-8.png",
           "delevery-patner-9.png",
         ],
-        width: "w-[240px]",
+        width: "w-[235px]",
       },
     ];
     return () => (
@@ -97,35 +97,34 @@ export default defineComponent({
         <Header />
         <section>
           <div class="max-w-[1296px] mx-auto py-16 px-12">
-            <div class="text-center align-item-center">
-              <h1 class="text-3xl md:text-6xl font-[--secondary-font] text-black mb-6 ">
-                Our Menu{" "}
+            <div class="text-center flex flex-col items-center px-4">
+              <h1 class="text-3xl sm:text-4xl md:text-6xl font-[--secondary-font] text-black mb-4">
+                Our Menu
               </h1>
-              <p class="px-93">
+
+              <p class="max-w-[600px] text-gray-600 text-sm sm:text-base">
                 We consider all the drivers of change gives you the components
-                you need to change to create a truly happens.
-              </p>{" "}
+                you need to create something truly meaningful.
+              </p>
             </div>
-            <div class="flex justify-center text-center align-item-center gap-2 py-12">
-              <button class="px-8 py-3 bg-[var(--brown-color)] text-white rounded-full hover:bg-black transition whitespace-nowrap">
-                All
-              </button>
-
-              <button class="w-fit px-6 py-3 border border-[var(--gray-color)] rounded-full hover:bg-[var(--brown-color)] hover:text-white transition">
-                Breakfast
-              </button>
-
-              <button class="w-fit px-6 py-3 border border-[var(--gray-color)] rounded-full hover:bg-[var(--brown-color)] hover:text-white transition">
-                Main Dishes
-              </button>
-
-              <button class="w-fit px-6 py-3 border border-[var(--gray-color)] rounded-full hover:bg-[var(--brown-color)] hover:text-white transition">
-                Drinks
-              </button>
-
-              <button class="w-fit px-6 py-3 border border-[var(--gray-color)] rounded-full hover:bg-[var(--brown-color)] hover:text-white transition">
-                Desserts
-              </button>
+            <div class="flex justify-start sm:justify-center gap-3 py-6 overflow-x-auto no-scrollbar px-4">
+              {["All", "Breakfast", "Main Dishes", "Drinks", "Desserts"].map(
+                (item, index) => (
+                  <button
+                    key={index}
+                    class={`
+        whitespace-nowrap px-6 py-2.5 rounded-full border transition
+        ${
+          index === 0
+            ? "bg-[var(--brown-color)] text-white border-transparent"
+            : "border-[var(--gray-color)] hover:bg-[var(--brown-color)] hover:text-white"
+        }
+      `}
+                  >
+                    {item}
+                  </button>
+                ),
+              )}
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center ">
@@ -140,35 +139,55 @@ export default defineComponent({
               ))}
             </div>
           </div>
-          <div class="bg-[var(--light-gray-color)]  py-16">
-            <div class="max-w-[1296px]  mx-auto  grid grid-cols-3 lg:flex-row items-center gap-12 px-12">
-              {/* Left Content */}
-              <div class="col-span-1 text-center lg:text-left px-12">
-                <h1 class="text-3xl md:text-6xl font-[--secondary-font] text-black mb-6">
-                  Our Menu
-                </h1>
+       <div class="bg-[var(--light-gray-color)] py-12 sm:py-16">
 
-                <p class="text-gray-600 max-w-md mx-auto lg:mx-0">
-                  We consider all the drivers of change that give you the
-                  components you need to create a truly impactful experience.
-                </p>
-              </div>
-              <div class="col-span-2 flex flex-col items-center gap-4">
-                {deleveryPatners.map((row, rowIndex) => (
-                  <div key={rowIndex} class="flex gap-4 justify-center">
-                    {row.logos.map((logo, index) => (
-                      <div
-                        key={index}
-                        class={`${row.width} h-[90px] bg-white rounded-xl flex items-center justify-center shadow-md hover:shadow-lg transition duration-300`}
-                      >
-                        <img src={logo} class="h-[28px] object-contain" />
-                      </div>
-                    ))}
-                  </div>
-                ))}
-              </div>
+  <div class="max-w-[1296px] mx-auto grid grid-cols-1 lg:grid-cols-3 items-center gap-10 px-4 sm:px-6 lg:px-12">
+
+    {/* Left Content */}
+    <div class="text-center lg:text-left">
+      <h1 class="text-3xl sm:text-4xl md:text-6xl font-[--secondary-font] text-black mb-4">
+        Our Menu
+      </h1>
+
+      <p class="text-gray-600 max-w-[500px] mx-auto lg:mx-0 text-sm sm:text-base">
+        We consider all the drivers of change that give you the components
+        you need to create a truly impactful experience.
+      </p>
+    </div>
+
+    {/* Right Content (Logos) */}
+    <div class="lg:col-span-2 flex flex-col items-center gap-4">
+
+      {deleveryPatners.map((row, rowIndex) => (
+        <div
+          key={rowIndex}
+          class="flex gap-3 sm:gap-4 justify-center flex-wrap"
+        >
+          {row.logos.map((logo, index) => (
+            <div
+              key={index}
+              class={`
+                ${row.width}
+                h-[80px] sm:h-[90px]
+                bg-white rounded-xl
+                flex items-center justify-center
+                shadow-md hover:shadow-lg
+                transition duration-300
+              `}
+            >
+              <img
+                src={logo}
+                class="h-[22px] sm:h-[28px] object-contain"
+              />
             </div>
-          </div>
+          ))}
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</div>
         </section>
 
         <Footer />

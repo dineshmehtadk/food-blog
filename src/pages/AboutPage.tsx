@@ -32,35 +32,26 @@ export default defineComponent({
               </div>
 
               {/* Stats Grid */}
-              <div class="grid grid-cols-2 gap-4 w-[610px]">
-                <div class="bg-white p-6 rounded-lg text-center w-[293px] h-[174px] flex flex-col items-center justify-center">
-                  <h2 class="text-2xl md:text-4xl font-[--secondary-font]]">
-                    3
-                  </h2>
-                  <span class="text-gray-600 text-sm">Locations</span>
-                </div>
+             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[610px] mx-auto">
 
-                <div class="bg-white p-6 rounded-lg text-center w-[293px] h-[174px] flex flex-col items-center justify-center">
-                  <h2 class="text-2xl md:text-4xl font-[--secondary-font]">
-                    1998
-                  </h2>
-                  <span class="text-gray-600 text-sm">Founded</span>
-                </div>
+  {[ 
+    { value: "3", label: "Locations" },
+    { value: "1998", label: "Founded" },
+    { value: "92+", label: "Staff Members" },
+    { value: "100%", label: "Satisfied Customers" },
+  ].map((item, index) => (
+    <div
+      key={index}
+      class="bg-white p-6 rounded-lg text-center flex flex-col items-center justify-center h-[140px] sm:h-[174px]"
+    >
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-[--secondary-font]">
+        {item.value}
+      </h2>
+      <span class="text-gray-600 text-sm">{item.label}</span>
+    </div>
+  ))}
 
-                <div class="bg-white p-6 rounded-lg text-center w-[293px] h-[174px] flex flex-col items-center justify-center">
-                  <h2 class="text-2xl md:text-4xl font-[--secondary-font]">
-                    92+
-                  </h2>
-                  <span class="text-gray-600 text-sm">Staff Members</span>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg text-center w-[293px] h-[174px] flex flex-col items-center justify-center">
-                  <h2 class="text-2xl md:text-4xl font-[--secondary-font]">
-                    100%
-                  </h2>
-                  <span class="text-gray-600 text-sm">Satisfied Customers</span>
-                </div>
-              </div>
+</div>
             </div>
 
             {/* Right Image */}
